@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 const clues = [
-  { id: 0, answer: 'Under the couch cushion ya boob', prompt: 'Under the couch cushion', password: 'Noice'},
+  { id: 0, answer: 'Under the couch cushion ya boob', prompt: 'Here I live, cozy and comfy, I feel real smushed and might look frumpy.', password: 'Noice'},
   { id: 1, answer: 'The Indespensible Calvin and Hobbes', prompt: 'Relive your childhood and feed a tiger. ', password: 'childhood' },
   { id: 2, answer: 'Page 100 of The Last Mrs Parrish', prompt: 'Five times twenty and a golddigger makes plenty', password: 'drama' },
   { id: 3, answer: 'Gloomhaven box', prompt: 'A sad refuge', password: 'noice' },
@@ -72,12 +72,14 @@ function App() {
         <p>
           The goal of the game is simple. Find all clues. In the location pointed to by each clue will be a passphrase that you need to enter to get your next clue. 
         </p>
-
-      <ClueDisplay clues = {clues} clueState = {clueState}></ClueDisplay>
-      <SubmitAnswer clues = {clues} clueState = {clueState} setClueState={setClueState}> </SubmitAnswer>
-       
-       
       </header>
+      <div className="ClueDisplay">
+        <ClueDisplay clues = {clues} clueState = {clueState}></ClueDisplay>
+      </div>
+      <div className ="SubmitAnswer">
+        <SubmitAnswer clues = {clues} clueState = {clueState} setClueState={setClueState}> </SubmitAnswer>
+      </div>
+      
     </div>
   );
 }
